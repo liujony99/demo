@@ -1,0 +1,45 @@
+spring:
+  #profiles:
+  #active: dev
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    # 基本属性
+    # 这一项可配可不配，如果不配置druid会根据url自动识别dbType，然后选择相应的driverClassName
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.2.105:3306/spring_boot_demo?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    # oracle jdbc:oracle:thin:@10.20.149.85:1521:springBootDemo
+    username: root
+    password: root
+    # druid配置项，默认spring-boot不支持，故需要config类来解析
+    # 配置初始化大小、最小、最大
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    # 配置获取连接等待超时的时间
+    maxWait: 60000
+    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    # 配置一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 300000
+    # maxEvictableIdleTimeMillis: 600000
+    # 用来检测连接是否有效的sql，要求是一个查询语句。如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会其作用
+    validationQuery: SELECT 1
+    # 申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
+    testWhileIdle: true
+    # 申请连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+    testOnBorrow: false
+    # 归还连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+    testOnReturn: false
+    # 是否缓存preparedStatement，也就是PSCache
+    poolPreparedStatements: true
+    # 要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    # 配置监控统计拦截的filters
+    filters: stat,wall,slf4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+mybatis:
+  typeAliasesPackage: com.cmft.demo.entity
+  configLocation: classpath:mybatis-config.xml
+  mapperLocations: classpath:mapper/*.xml
+
