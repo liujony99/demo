@@ -1,3 +1,5 @@
+id_rsa_git
+id_rsa_git.pub
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
@@ -17,8 +19,6 @@ target/
 *.iws
 *.iml
 *.ipr
-id_rsa_git
-id_rsa_git.pub
 
 ### NetBeans ###
 /nbproject/private/
@@ -31,5 +31,5 @@ build/
 ### VS Code ###
 .vscode/
 !/mvnw
-!/mvnw
 !/src/test/java/com/DemoApplicationTests.java
+!/pom.xml
