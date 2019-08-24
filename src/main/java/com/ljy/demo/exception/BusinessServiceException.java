@@ -1,5 +1,10 @@
 package com.ljy.demo.exception;
 
+/**
+ * 业务异常处理类
+ * @author jony
+ * @create 2019-08-24
+ */
 public class BusinessServiceException extends Exception {
 
     public BusinessServiceException () {
