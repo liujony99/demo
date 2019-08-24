@@ -14,7 +14,7 @@
 
     <!-- 设置包扫描 -->
     <!-- <typeAliases>
-        <package name="com.ljydemo.entity"/>
+        <package name="com.ljy.demo.entity"/>
     </typeAliases> -->
 
 </configuration>
