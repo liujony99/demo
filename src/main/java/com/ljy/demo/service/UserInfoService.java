@@ -1,19 +1,16 @@
-package com.cmft.demo.mapper;
+package com.ljy.demo.service;
 
-import com.cmft.demo.entity.UserInfo;
-import org.apache.ibatis.annotations.Mapper;
+import com.ljy.demo.entity.UserInfo;
 
 import java.util.List;
 
 /**
- * 用户基本信息持久化接口
+ * 用户基本信息服务接口
  *
  * @author liujy007
  * @create 2019-08-22
  */
-@Mapper
-public interface UserInfoMapper {
-
+public interface UserInfoService {
     /**
      * 新增用户基本信息
      *

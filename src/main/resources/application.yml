@@ -39,7 +39,7 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
 mybatis:
-  typeAliasesPackage: com.cmft.demo.entity
+  typeAliasesPackage: com.ljy.demo.entity
   configLocation: classpath:mybatis-config.xml
   mapperLocations: classpath:mapper/*.xml
 

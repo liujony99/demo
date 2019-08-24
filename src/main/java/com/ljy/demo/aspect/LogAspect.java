@@ -1,4 +1,4 @@
-package com.cmft.demo.aspect;
+package com.ljy.demo.aspect;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,14 +12,14 @@ import org.slf4j.LoggerFactory;
 public class LogAspect {
     private static final Logger log = LoggerFactory.getLogger(LogAspect.class);
 
-    /*@Before("execution(* com.cmft.demo.controller.*.*(..))")
+    /*@Before("execution(* com.ljy.demo.controller.*.*(..))")
     public void before(JoinPoint point) {
         String className = point.getTarget().getClass().getName();
         String methodName = point.getSignature().getName();
         log.info("className:{},method:{},入参为：{}", className, methodName, Arrays.asList(point.getArgs()));
     }
 
-    @AfterReturning(value = "execution(* com.cmft.demo.controller.*.*(..))", returning = "result")
+    @AfterReturning(value = "execution(* com.ljy.demo.controller.*.*(..))", returning = "result")
     public Object after(JoinPoint point, Object result) {
         String className = point.getTarget().getClass().getName();
         String methodName = point.getSignature().getName();

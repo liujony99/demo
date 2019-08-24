@@ -1,8 +1,8 @@
-package com.cmft.demo.service.impl;
+package com.ljy.demo.service.impl;
 
-import com.cmft.demo.entity.UserInfo;
-import com.cmft.demo.mapper.UserInfoMapper;
-import com.cmft.demo.service.UserInfoService;
+import com.ljy.demo.entity.UserInfo;
+import com.ljy.demo.mapper.UserInfoMapper;
+import com.ljy.demo.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.cmft.demo.util;
+package com.ljy.demo.util;
 
 /**
  * Request辅助类

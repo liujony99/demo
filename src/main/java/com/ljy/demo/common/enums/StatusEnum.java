@@ -1,4 +1,4 @@
-package com.cmft.demo.common.enums;
+package com.ljy.demo.common.enums;
 
 /**
  * 状态枚举类

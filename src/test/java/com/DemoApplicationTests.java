@@ -1,6 +1,6 @@
 package com;
 
-import com.cmft.demo.DemoApplicationTest;
+import com.ljy.demo.DemoApplicationTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

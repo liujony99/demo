@@ -14,7 +14,7 @@
 
     <!-- 设置包扫描 -->
     <!-- <typeAliases>
-        <package name="com.cmft.demo.entity"/>
+        <package name="com.ljydemo.entity"/>
     </typeAliases> -->
 
 </configuration>

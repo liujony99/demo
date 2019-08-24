@@ -1,4 +1,4 @@
-package com.cmft.demo.entity;
+package com.ljy.demo.entity;
 
 import lombok.Data;
 

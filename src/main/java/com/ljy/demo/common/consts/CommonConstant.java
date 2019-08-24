@@ -1,4 +1,4 @@
-package com.cmft.demo.common.consts;
+package com.ljy.demo.common.consts;
 
 /**
  * 通用常量类

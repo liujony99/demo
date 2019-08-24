@@ -1,7 +1,7 @@
-package com.cmft.demo.controller;
+package com.ljy.demo.controller;
 
-import com.cmft.demo.entity.UserInfo;
-import com.cmft.demo.service.UserInfoService;
+import com.ljy.demo.entity.UserInfo;
+import com.ljy.demo.service.UserInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

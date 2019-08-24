@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cmft.demo.mapper.UserInfoMapper">
+<mapper namespace="com.ljy.demo.mapper.UserInfoMapper">
 
-    <parameterMap id="UserInfoParam" type="com.cmft.demo.entity.UserInfo"/>
+    <parameterMap id="UserInfoParam" type="com.ljy.demo.entity.UserInfo"/>
 
-    <resultMap id="BaseInfoResultMap" type="com.cmft.demo.entity.BaseInfo">
+    <resultMap id="BaseInfoResultMap" type="com.ljy.demo.entity.BaseInfo">
         <result column="created_name" property="createdName" />
         <result column="created_date" property="createdDate" />
         <result column="updated_name" property="updatedName" />
@@ -13,7 +13,7 @@
         <result column="is_del" property="del" />
     </resultMap>
 
-    <resultMap id="UserInfoResultMap" type="com.cmft.demo.entity.UserInfo" extends="BaseInfoResultMap">
+    <resultMap id="UserInfoResultMap" type="com.ljy.demo.entity.UserInfo" extends="BaseInfoResultMap">
         <id column="user_id" property="userId" />
         <result column="user_name" property="userName" />
         <result column="age" property="age" />
