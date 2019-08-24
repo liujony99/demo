@@ -26,77 +26,37 @@ public class UserInfoController {
     @RequestMapping(value = "/addUserInfo", method = RequestMethod.POST)
     public ModelMap addUserInfo(@RequestBody UserInfo userInfo) {
         ModelMap modelMap = new ModelMap();
-        try {
-            userInfoService.addUserInfo(userInfo);
-            modelMap.put("code", "000");
-            modelMap.put("msg", "新增用户基本信息成功");
-        } catch (Exception e) {
-            log.error("新增用户基本信息异常", e);
-            modelMap.put("code", "301");
-            modelMap.put("msg", "新增用户基本信息异常");
-        }
+        userInfoService.addUserInfo(userInfo);
         return modelMap;
     }
 
     @RequestMapping(value = "/updateUserInfo", method = RequestMethod.POST)
     public ModelMap updateUserInfo(@RequestBody UserInfo userInfo) {
         ModelMap modelMap = new ModelMap();
-        try {
-            userInfoService.updateUserInfo(userInfo);
-            modelMap.put("code", "000");
-            modelMap.put("msg", "更新用户基本信息成功");
-        } catch (Exception e) {
-            log.error("更新用户基本信息异常", e);
-            modelMap.put("code", "301");
-            modelMap.put("msg", "更新用户基本信息异常");
-        }
+        userInfoService.updateUserInfo(userInfo);
         return modelMap;
     }
 
     @RequestMapping(value = "/deleteUserInfo", method = RequestMethod.POST)
     public ModelMap deleteUserInfo(@RequestParam("userId") Long userId) {
         ModelMap modelMap = new ModelMap();
-        try {
-            userInfoService.deleteUserInfo(userId);
-            modelMap.put("code", "000");
-            modelMap.put("msg", "删除用户基本信息成功");
-        } catch (Exception e) {
-            log.error("删除用户基本信息异常", e);
-            modelMap.put("code", "301");
-            modelMap.put("msg", "删除用户基本信息异常");
-        }
+        userInfoService.deleteUserInfo(userId);
         return modelMap;
     }
 
     @RequestMapping(value = "/queryUserInfoList", method = RequestMethod.POST)
     public ModelMap queryUserInfoList(@RequestBody UserInfo userInfo) {
         ModelMap modelMap = new ModelMap();
-        try {
-            List<UserInfo> userInfoList = userInfoService.queryUserInfoList(userInfo);
-            modelMap.put("code", "000");
-            modelMap.put("msg", "批量查询用户基本信息成功");
-            modelMap.put("data", userInfoList);
-        } catch (Exception e) {
-            log.error("批量查询用户基本信息异常", e);
-            modelMap.put("code", "301");
-            modelMap.put("msg", "批量查询用户基本信息异常");
-        }
+        List<UserInfo> userInfoList = userInfoService.queryUserInfoList(userInfo);
+        modelMap.put("data", userInfoList);
         return modelMap;
     }
 
     @RequestMapping(value = "/queryUserInfo", method = RequestMethod.POST)
     public ModelMap queryUserInfo(@RequestBody UserInfo userInfo) {
         ModelMap modelMap = new ModelMap();
-        try {
-            UserInfo userInfo1 = userInfoService.queryUserInfo(userInfo);
-            modelMap.put("code", "000");
-            modelMap.put("msg", "查询用户基本信息成功");
-            modelMap.put("data", userInfo1);
-        } catch (Exception e) {
-            log.error("查询用户基本信息异常", e);
-            modelMap.put("code", "301");
-            modelMap.put("msg", "查询用户基本信息异常");
-        }
+        UserInfo userInfo1 = userInfoService.queryUserInfo(userInfo);
+        modelMap.put("data", userInfo1);
         return modelMap;
     }
 

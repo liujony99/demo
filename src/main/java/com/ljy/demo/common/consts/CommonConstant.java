@@ -8,9 +8,15 @@ package com.ljy.demo.common.consts;
  */
 public class CommonConstant {
 
-    private static final int ONE = 1;
+    public static final int ONE = 1;
 
-    private static final int TWO = 1;
+    public static final int TWO = 1;
 
-    private static final int THREE = 1;
+    public static final int THREE = 1;
+
+    public static final String Y = "Y";
+
+    public static final String N = "N";
+
+    public static final String PATTERN = "yyyy-MM-dd HH:mm:ss.SSS";
 }

@@ -5,11 +5,12 @@
 <configuration>
     <settings>
         <!-- 配置日志 -->
-        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!-- 指定 MyBatis 所用日志的具体实现, SLF4J\STDOUT_LOGGING\NO_LOGGING -->
+        <setting name="logImpl" value="SLF4J"/>
+        <!-- 指定 MyBatis 增加到日志名称的前缀,在日志文件中输出日志 -->
+        <!-- <setting name="logPrefix" value="mapper."/> -->
         <!-- 驼峰匹配 -->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
-        <!-- <setting name="logImpl" value="SLF4J"/> -->
-        <!-- <setting name="logPrefix" value="mapper."/> -->
     </settings>
 
     <!-- 设置包扫描 -->

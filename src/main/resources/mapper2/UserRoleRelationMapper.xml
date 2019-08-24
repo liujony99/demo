@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ljy.demo.mapper2.UserRoleRelationMapper">
+
+    <parameterMap id="UserRoleRelationParam" type="com.ljy.demo.entity.UserRoleRelation"/>
+
+    <resultMap id="BaseInfoResultMap" type="com.ljy.demo.entity.BaseInfo">
+        <result column="created_name" property="createdName" />
+        <result column="created_date" property="createdDate" />
+        <result column="updated_name" property="updatedName" />
+        <result column="updated_date" property="updatedDate" />
+        <result column="is_del" property="del" />
+    </resultMap>
+
+    <resultMap id="UserRoleRelationResultMap" type="com.ljy.demo.entity.UserRoleRelation" extends="BaseInfoResultMap">
+        <result column="user_id" property="userId" />
+        <result column="role_id" property="roleId" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <sql id="selectSql">
+        user_id,
+        role_id,
+        status,
+        created_name,
+        created_date,
+        updated_name,
+        updated_date,
+        is_del
+    </sql>
+
+    <insert id="addUserRoleRelation" parameterMap="UserRoleRelationParam">
+        insert into user_role_relation (
+        user_id, role_id
+        ) values (
+        #{userId},
+        #{roleId})
+    </insert>
+
+    <update id="updateUserRoleRelation" parameterMap="UserRoleRelationParam">
+        update user_role_relation
+        set
+        <if test="status != null and status !=''">
+            status = #{status}
+        </if>
+        <if test="roleId != null">
+            role_id = #{roleId},
+        </if>
+        <if test="updatedName != null and updatedName != ''">
+            updated_name = #{updatedName},
+        </if>
+        updated_date = now()
+        where user_id = #{userId}
+    </update>
+
+    <update id="deleteUserRoleRelation" parameterMap="UserRoleRelationParam">
+        update user_role_relation
+        set is_del = 'Y',
+        updated_date = now()
+        where user_id = #{userId}
+    </update>
+
+    <select id="queryUserRoleRelationList" parameterMap="UserRoleRelationParam" resultMap="UserRoleRelationResultMap">
+        select
+        <include refid="selectSql" />
+        from user_role_relation
+        where 1=1
+        <if test="userId != null">
+            and user_id = #{userId}
+        </if>
+        <if test="roleId != null">
+            role_id = #{roleId},
+        </if>
+    </select>
+
+</mapper>

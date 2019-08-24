@@ -6,7 +6,7 @@ spring:
     # 基本属性
     # 这一项可配可不配，如果不配置druid会根据url自动识别dbType，然后选择相应的driverClassName
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.2.105:3306/spring_boot_demo?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    url: jdbc:mysql://192.168.2.105:3306/spring_boot_demo?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     # oracle jdbc:oracle:thin:@10.20.149.85:1521:springBootDemo
     username: root
     password: root
@@ -41,5 +41,5 @@ spring:
 mybatis:
   typeAliasesPackage: com.ljy.demo.entity
   configLocation: classpath:mybatis-config.xml
-  mapperLocations: classpath:mapper/*.xml
+  mapperLocations: classpath:mapper/*.xml,classpath:mapper2/*.xml
 

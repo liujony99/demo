@@ -44,12 +44,12 @@ public class UserInfoServiceImpl implements UserInfoService {
     /**
      * 删除用户基本信息
      *
-     * @param UserId 用户信息ID
+     * @param userId 用户信息ID
      * @return int
      */
     @Override
-    public int deleteUserInfo(long UserId) {
-        return userInfoMapper.deleteUserInfo(UserId);
+    public int deleteUserInfo(long userId) {
+        return userInfoMapper.deleteUserInfo(userId);
     }
 
     /**

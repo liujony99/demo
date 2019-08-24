@@ -1,5 +1,7 @@
 package com.ljy.demo.util;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
 /**
@@ -17,5 +19,9 @@ public class CommonUtil {
      */
     public static String getUUIDWithNotLine() {
         return UUID.randomUUID().toString().replaceAll("-", "");
+    }
+
+    public static String getCurrentTimeByFormat(String pattern) {
+        return LocalDateTime.now().format(DateTimeFormatter.ofPattern(pattern));
     }
 }

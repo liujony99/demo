@@ -73,6 +73,9 @@
         <if test="phone != null and phone != ''">
             phone = #{phone},
         </if>
+        <if test="status != null and status !=''">
+            status = #{status}
+        </if>
         <if test="updatedName != null and updatedName != ''">
             updated_name = #{updatedName},
         </if>

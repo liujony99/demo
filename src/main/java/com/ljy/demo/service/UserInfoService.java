@@ -30,10 +30,10 @@ public interface UserInfoService {
     /**
      * 删除用户基本信息
      *
-     * @param UserId 用户信息ID
+     * @param userId 用户信息ID
      * @return int
      */
-    int deleteUserInfo(long UserId);
+    int deleteUserInfo(long userId);
 
     /**
      * 批量查询用户的基本信息
